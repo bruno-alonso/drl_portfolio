@@ -3,3 +3,4 @@ datasets/
 *.csv
 *.zip
 *.png
+!docs/*.png

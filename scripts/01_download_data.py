@@ -1,5 +1,6 @@
 from pathlib import Path
 from datetime import timedelta
+import os
 import sys
 import pandas as pd
 
@@ -13,7 +14,7 @@ from src.data import get_combined_dataset
 TICKERS      = ["SPY", "TLT", "GLD"]
 DATA_START   = "2006-01-01"
 DATA_END     = "2024-12-31"
-FRED_API_KEY = "YOUR_FRED_API_KEY"
+FRED_API_KEY = os.environ.get("FRED_API_KEY")  # free key: https://fred.stlouisfed.org/docs/api/api_key.html
 
 # Directorio de salida
 OUT_DIR = Path(__file__).parents[1] / "datasets"
